@@ -1,4 +1,4 @@
-const options = {
+const option = {
   reply_markup: JSON.stringify({
     inline_keyboard: [
       [{
@@ -51,6 +51,6 @@ const severaloptions = {
 
 
 module.exports = {
-  options,
+  option,
   severaloptions
 };
