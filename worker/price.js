@@ -12,6 +12,7 @@ const options = {
   })
 };
 const Price = async (callbackQuery, chatId, messageId) => {
+  try{
   if (callbackQuery.data === 'ten_click') {
     bot.answerCallbackQuery(callbackQuery.id);
     await bot.sendMessage(chatId, `*Invest 10 USDT, get 100 USDT*
@@ -85,9 +86,13 @@ const Price = async (callbackQuery, chatId, messageId) => {
       });
     await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_100000_USDT' with the actual address
   }
+}
+catch(error) {
+  console.log(error)
+}
 };
 
 
 module.exports = {
-  Price
+Price
 }

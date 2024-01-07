@@ -2,26 +2,9 @@ const express = require('express');
 const app = express();
 const http = require('http');
 const server = http.createServer(app);
-const fs = require('fs');
-const pdf = require('pdf-parse');
 const bodyParser = require('body-parser')
 const TelegramBot = require('node-telegram-bot-api')
-const token = '6051844104:AAG4xbaLlOO633ZuoiMpTqByIWoMm532wzg'
-const bot = new TelegramBot(token);
-app.use(bodyParser.json());
-
-app.post(`/webhook/${token}`, (req, res) => {
-  bot.processUpdate(req.body);
-  res.sendStatus(200);
-});
-
-bot.setWebHook(`https://marathon-2l.onrender.com/webhook/${token}`)
-.then(() => {
-  console.log('Webhook set!');
-})
-.catch((error) => {
-  console.error('Error setting webhook:', error);
-});
+const token = '6051844104:AAG4xbaLlOO633ZuoiMpTqByIWoMm532wzg';
 const {
   options,
   severaloptions
@@ -30,10 +13,27 @@ const {
 const {
   Price
 } = require('./worker/price.js');
-require('dotenv').config();
+
+const bot = new TelegramBot(token);
+app.use(bodyParser.json());
+
+app.post(`/webhook/${token}`, (req, res) => {
+  bot.processUpdate(req.body);
+  res.sendStatus(200);
+});
+
+bot.setWebHook(`https://marathon-942l.onrender.com/webhook/${token}`)
+.then(() => {
+  console.log('Webhook set!');
+})
+.catch((error) => {
+  console.error('Error setting webhook:', error);
+});
+
+
 
 app.get('/', (req, res) => {
-  res.send('stop playing');
+  res.send('stop playing o');
 });
 
 bot.onText(/\/start/, async(msg) => {
