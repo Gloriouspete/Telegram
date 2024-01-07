@@ -1,0 +1,109 @@
+› Building app...
+Downloading https://services.gradle.org/distributions/gradle-8.0.1-all.zip
+...............10%................20%................30%................40%................50%................60%................70%................80%................90%................100%
+
+Welcome to Gradle 8.0.1!
+
+Here are the highlights of this release:
+ - Improvements to the Kotlin DSL
+ - Fine-grained parallelism from the first build with configuration cache
+ - Configurable Gradle user home cache cleanup
+
+For more details see https://docs.gradle.org/8.0.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+Configuration on demand is an incubating feature.
+
+> Configure project :expo-modules-core
+Checking the license for package NDK (Side by side) 23.1.7779620 in C:\Users\karim\AppData\Local\Android\sdk\licenses
+License for package NDK (Side by side) 23.1.7779620 accepted.
+Preparing "Install NDK (Side by side) 23.1.7779620 (revision: 23.1.7779620)".
+"Install NDK (Side by side) 23.1.7779620 (revision: 23.1.7779620)" ready.
+Installing NDK (Side by side) 23.1.7779620 in C:\Users\karim\AppData\Local\Android\sdk\ndk\23.1.7779620
+"Install NDK (Side by side) 23.1.7779620 (revision: 23.1.7779620)" complete.
+"Install NDK (Side by side) 23.1.7779620 (revision: 23.1.7779620)" finished.
+Checking the license for package CMake 3.22.1 in C:\Users\karim\AppData\Local\Android\sdk\licenses                                                                                                                                      
+License for package CMake 3.22.1 accepted.
+Preparing "Install CMake 3.22.1 (revision: 3.22.1)".
+"Install CMake 3.22.1 (revision: 3.22.1)" ready.
+Installing CMake 3.22.1 in C:\Users\karim\AppData\Local\Android\sdk\cmake\3.22.1
+"Install CMake 3.22.1 (revision: 3.22.1)" complete.
+"Install CMake 3.22.1 (revision: 3.22.1)" finished.
+
+> Configure project :expo
+
+Using expo modules
+  - expo-application (5.3.1)
+  - expo-barcode-scanner (12.5.3)
+  - expo-constants (14.4.2)
+  - expo-file-system (15.4.4)
+  - expo-font (11.4.0)
+  - expo-image-loader (4.3.0)
+  - expo-image-picker (14.3.2)
+  - expo-keep-awake (12.3.0)
+  - expo-linear-gradient (12.3.0)
+  - expo-location (16.1.0)
+  - expo-modules-core (1.5.11)
+  - expo-modules-core$android-annotation-processor (1.5.11)
+  - expo-modules-core$android-annotation (1.5.11)
+  - expo-splash-screen (0.20.5)
+  - expo-system-ui (2.4.0)
+
+
+> Configure project :react-native-reanimated
+No AAR for react-native-reanimated found. Attempting to build from source.
+Android gradle plugin: 7.4.2
+Gradle: 8.0.1
+WARNING:Software Components will not be created automatically for Maven publishing from Android Gradle Plugin 8.0. To opt-in to the future behavior, set the Gradle property android.disableAutomaticComponentCreation=true in the `gradle.properties` file or use the new publishing DSL.                                                                                                                                                                                      
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':app:lintVitalReportRelease'.
+> Could not resolve all task dependencies for configuration ':app:releaseRuntimeClasspath'.
+   > Could not resolve project :react-native-camera.
+     Required by:
+         project :app
+      > The consumer was configured to find a component for use during runtime, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release', attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2'. However we cannot choose between the following variants of project :react-native-camera:
+          - generalReleaseRuntimeElements
+          - mlkitReleaseRuntimeElements
+        All of them match the consumer attributes:
+          - Variant 'generalReleaseRuntimeElements' capability Perks:react-native-camera:unspecified declares a component for use during runtime, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release':
+              - Unmatched attributes:
+                  - Provides attribute 'com.android.build.api.attributes.ProductFlavor:react-native-camera' with value 'general' but the consumer didn't ask for it
+                  - Provides attribute 'com.android.build.gradle.internal.attributes.VariantAttr' with value 'generalRelease' but the consumer didn't ask for it
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+                  - Provides attribute 'react-native-camera' with value 'general' but the consumer didn't ask for it
+          - Variant 'mlkitReleaseRuntimeElements' capability Perks:react-native-camera:unspecified declares a component for use during runtime, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release':
+              - Unmatched attributes:
+                  - Provides attribute 'com.android.build.api.attributes.ProductFlavor:react-native-camera' with value 'mlkit' but the consumer didn't ask for it
+                  - Provides attribute 'com.android.build.gradle.internal.attributes.VariantAttr' with value 'mlkitRelease' but the consumer didn't ask for it
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+                  - Provides attribute 'react-native-camera' with value 'mlkit' but the consumer didn't ask for it
+        The following variants were also considered but didn't match the requested attributes:
+          - Variant 'generalDebugApiElements' capability Perks:react-native-camera:unspecified declares a component, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2':
+              - Incompatible because this component declares a component for use during compile-time, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component for use during runtime, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release'
+              - Other compatible attribute:
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'generalDebugRuntimeElements' capability Perks:react-native-camera:unspecified declares a component for use during runtime, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2':
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release'
+              - Other compatible attribute:
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'generalReleaseApiElements' capability Perks:react-native-camera:unspecified declares a component, as well as attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.4.2', attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release':
+              - Incompatible because this component declares a component for use during compile-time and the consumer needed a component for use during runtime
+              - Other compatible attribute:
+5 actionable tasks: 5 executed
+Error: C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\android\gradlew.bat exited with non-zero code: 1 
+Error: C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\android\gradlew.bat exited with non-zero code: 1 
+    at ChildProcess.completionListener (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\@expo\spawn-async\build\spawnAsync.js:52:23)
+    at Object.onceWrapper (node:events:632:26)
+    at ChildProcess.emit (node:events:517:28)
+    at cp.emit (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\cross-spawn\lib\enoent.js:34:29)
+    at maybeClose (node:internal/child_process:1098:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:303:5)
+    ...
+    at Object.spawnAsync [as default] (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\@expo\spawn-async\build\spawnAsync.js:17:21)
+    at spawnGradleAsync (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\@expo\cli\build\src\start\platforms\android\gradle.js:72:46)
+    at Object.assembleAsync (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\@expo\cli\build\src\start\platforms\android\gradle.js:52:18)
+    at runAndroidAsync (C:\Users\karim\Desktop\PerksTZ\Perks_Deo\Perks_FrontEnd\node_modules\@expo\cli\build\src\run\android\runAndroidAsync.js:36:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
