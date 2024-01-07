@@ -1,6 +1,6 @@
 const {
   bot
-} = require("../txt.js")
+} = require("../invest.js")
 const options = {
   reply_markup: JSON.stringify({
     inline_keyboard: [

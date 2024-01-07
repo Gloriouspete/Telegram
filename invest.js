@@ -4,10 +4,24 @@ const http = require('http');
 const server = http.createServer(app);
 const fs = require('fs');
 const pdf = require('pdf-parse');
-const
-{
-  bot
-} = require("./txt.js");
+const bodyParser = require('body-parser')
+const TelegramBot = require('node-telegram-bot-api')
+const token = '6051844104:AAG4xbaLlOO633ZuoiMpTqByIWoMm532wzg'
+const bot = new TelegramBot(token);
+app.use(bodyParser.json());
+
+app.post(`/webhook/${token}`, (req, res) => {
+  bot.processUpdate(req.body);
+  res.sendStatus(200);
+});
+
+bot.setWebHook(`https://marathon-2l.onrender.com/webhook/${token}`)
+.then(() => {
+  console.log('Webhook set!');
+})
+.catch((error) => {
+  console.error('Error setting webhook:', error);
+});
 const {
   options,
   severaloptions
@@ -64,9 +78,9 @@ bot.onText(/\/balance/, async (msg) => {
   const chatId = msg.chat.id;
   const balanceMessage = `Your current investment balance is 0 USDT.
 
-To start earning, consider making an investment deposit.
+  To start earning, consider making an investment deposit.
 
-Click the button below to explore investment options. 📈💼`;
+  Click the button below to explore investment options. 📈💼`;
 
   bot.sendMessage(chatId, balanceMessage, options);
 });
@@ -80,3 +94,6 @@ server.listen(3000,
   () => {
     console.log('server is running');
   });
+module.exports = {
+  bot
+};
