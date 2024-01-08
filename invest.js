@@ -5,6 +5,9 @@ const server = http.createServer(app);
 const bodyParser = require('body-parser')
 const TelegramBot = require('node-telegram-bot-api')
 const token = '6051844104:AAG4xbaLlOO633ZuoiMpTqByIWoMm532wzg';
+/*
+const token = '6640105408:AAHlMp5tuKqH1fmDdb_NW-FEMUXL6tz16Q8'
+
 const {
   option,
   severaloptions
@@ -43,7 +46,7 @@ app.get('/', (req, res) => {
 
 bot.onText(/\/start/, async(msg) => {
   const chatId = msg.chat.id;
-  const message = `👋 Hello there, I'm the Marathon Investment Bot, your gateway to automated cryptocurrency trading!
+  const message = `👋 Hello there, I'm the Muhammadu Investment Bot, your gateway to automated cryptocurrency trading!
 
   🎁 Unlock the potential to earn x10 of your USDT every 24 hours with our cutting-edge automated trading system that ensures a 99% success rate.
 
@@ -96,7 +99,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_200_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_200_USDT' with the actual address
     } else if (callbackQuery.data === 'fivehundred_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 500 USDT, get 5000 USDT*
@@ -105,7 +108,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_500_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_500_USDT' with the actual address
     } else if (callbackQuery.data === 'thousand_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 1000 USDT, get 10000 USDT*
@@ -114,7 +117,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_1000_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_1000_USDT' with the actual address
     } else if (callbackQuery.data === 'tenthousand_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 10000 USDT, get 100,000 USDT*
