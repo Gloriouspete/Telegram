@@ -73,7 +73,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options);
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options);
     } else if (callbackQuery.data === 'fifty_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 50 USDT, get 500 USDT*
@@ -82,7 +82,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_50_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_50_USDT' with the actual address
     } else if (callbackQuery.data === 'hundred_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 100 USDT, get 1000 USDT*
@@ -91,7 +91,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_100_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_100_USDT' with the actual address
     } else if (callbackQuery.data === 'twohundred_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 200 USDT, get 2000 USDT*
@@ -127,7 +127,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_10000_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_10000_USDT' with the actual address
     } else if (callbackQuery.data === 'hundredthousand_click') {
       bot.answerCallbackQuery(callbackQuery.id);
       await bot.sendMessage(chatId, `*Invest 100,000 USDT, get 1,000,000 USDT*
@@ -136,7 +136,7 @@ const Price = async (callbackQuery, chatId, messageId) => {
           reply_to_message_id: messageId,
           parse_mode: 'MarkdownV2'
         });
-      await bot.sendMessage(chatId, '0x8D5583F20f0e066E8993e9ea2f1FE3ad6eCEb94C', options); // Replace 'ADDRESS_FOR_100000_USDT' with the actual address
+      await bot.sendMessage(chatId, '0x3Ad24874cC1c37c74eD03E36c60963a6E8D8FCf5', options); // Replace 'ADDRESS_FOR_100000_USDT' with the actual address
     }
   }
   catch(error) {
